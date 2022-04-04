@@ -1,6 +1,8 @@
 # Homework 9: Stripping Comments from a C file
 
-In this homework, you're going to write a program in C that strips single-line comments from source code files. Single-line comments in C and Java begin with the characters `//` and continue to the end of the line. Your program can either read input from `stdin` or from a file. In either case, it will read one character at a time using the `getc()` or `getchar()` function and process the input with a state machine. Your state machine will print the comment-stripped output to `stdout`.
+In this homework, you're going to write a program in C that strips single-line comments from source code files. The input to your program will be a C file with single-line comments. The output will be the same file without any single-line comments.
+
+Single-line comments in C and Java begin with the characters `//` and continue to the end of the line. Your program can either read input from `stdin` or from a file. In either case, it will read one character at a time using the `getc()` or `getchar()` function and process the input with a state machine. Your state machine will print the comment-stripped output to `stdout`.
 
 ## State Machines in C
 
@@ -52,5 +54,14 @@ Once you have opened a file, you can read its contents into a buffer (array) usi
     unsigned char buf[2048];
     unsigned int nchar = read(fd, buf, sizeof(buf));
 
+
+
 # Grading
+
+|              Task                                                            |   Points   |
+|------------------------------------------------------------------------------|------------|
+| Program Reads Characters (either from stdin or file)                         |     5      |
+| Program prints all characters except comments                                |     30     |
+| Program correctly prints single slash (as in divide)                         |     15     |
+| **Extra Credit:** Read input from file. Accept file name from command line.  |     10     |
 
